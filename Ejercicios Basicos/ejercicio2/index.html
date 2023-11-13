@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Formulario de Cambio de Moneda</h2>
+    <form action="php.php" method="GET">
+        <label for="cantidad_euros">Introduce cantidad de Euros a Cambiar:</label>
+        <input type="text" id="cantidad_euros" name="cantidad_euros"  required><br>
+
+        <label for="moneda_destino">Seleccionar moneda de Destino:</label>
+        <select id="moneda_destino" name="moneda_destino">
+            <option value="usd">Dólares estadounidenses (USD)</option>
+            <option value="gbp">Libras esterlinas (GBP)</option>
+            <!-- Agrega más opciones de moneda si es necesario -->
+        </select><br>
+
+        <br>
+
+        <input type="submit" value="Calcular Cambio">
+    </form>
+</body>
+</html>
