@@ -1,0 +1,10 @@
+header {
+    background-color: black; /* Color de fondo opcional para el encabezado */
+    padding: 20px; /* Espaciado interior */
+   
+  }
+
+  header .texto {
+  color: white;
+  text-align: center;
+  }
