@@ -28,9 +28,14 @@ header {
     width: 40px;
   }
   nav{
+    width: 200px; /* Ancho del nav */
+    background-color: rgb(113, 112, 112);
+    color: black;
+ 
     display: block;
     padding-left: 20px;
   }
   main{
-    
+    flex: 0 0 70%;
+    background-color: aqua;
   }

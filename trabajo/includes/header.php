@@ -2,7 +2,7 @@
 
 <div>
     <img src="images/logoCPI.png" alt="No se ve">
-   <h1 class="texto">Desarrollo web en entorno Servidor</h1>
+   <h1 class="texto">DESARROLLO WEB EN ENTORNO SERVIDOR</h1>
 </div>
     
 </header> 

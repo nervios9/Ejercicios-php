@@ -10,10 +10,7 @@
 <body>
 <?php include "includes/header.php"; ?> <!-- Aquí se incluye el contenido.php -->
 <?php include "includes/menu.php"; ?>
-<main>
-puro texto bb
 
-</main>
 <nav>
   Menu
   <br>
@@ -23,7 +20,10 @@ puro texto bb
   <a href="arrays/index.php">Arrays</a><br>
   <a href="bdjardineria/index.php">BBDD</a><br>
 </nav>
+<main>
+puro texto bb
 
+</main>
 
 <footer>
   <div class="redesSociales">
@@ -31,7 +31,8 @@ puro texto bb
     <a href="https://www.twitter.com" target="_blank"><img src="images/twitter.png" alt="Twitter"></a>
     <a href="https://www.instagram.com" target="_blank"><img src="images/instagram.png" alt="Instagram"></a>
     <a href="https://discord.gg/fTc7N6tUek" target="_blank"><img src="images/discord.png" alt="Discord"></a>
-    <a href="https://www.linkedin.com/" target="_blank"><img src="images/linkedin.png" alt="Linkedin"></a>
+    <a href="https://www.linkedin.com/" target="_blank"><img src="images/linkedin.png" alt="Linkedin"></a><br>
+    Sergio Gomez Oblanca
   </div>
 </footer>
 </body>
