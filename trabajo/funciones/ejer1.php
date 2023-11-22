@@ -8,7 +8,8 @@
 <?php include "../includes/menu2.php"; ?>
 <div class="contenedor">
     <?php include "../includes/nav_funciones.php"; ?>
-        <main>
+<main>
+    1
 </main>
     <?php include "../includes/aside2.php"; ?>
 </div>

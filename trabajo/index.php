@@ -1,39 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=, initial-scale=1.0">
-    <title>Document</title>
-
-    <link rel="stylesheet" type="text/css" href="css/estilos.css">
+<?php include "includes/metadata.php"; ?>
 </head>
 <body>
-<?php include "includes/header.php"; ?> <!-- Aquí se incluye el contenido.php -->
+<?php include "includes/header.php"; ?> 
 <?php include "includes/menu.php"; ?>
-
-<nav>
-  Menu
-  <br>
-  <a href="./index.php">Inicio</a><br> 
-  <a href="basicos/index.php">Basicos</a><br>
-  <a href="funciones/index.php">Funciones</a><br>
-  <a href="arrays/index.php">Arrays</a><br>
-  <a href="bdjardineria/index.php">BBDD</a><br>
-</nav>
+<div class="contenedor">
+<?php include "includes/nav.php"; ?>
 <main>
-puro texto bb
+
 
 </main>
-
-<footer>
-  <div class="redesSociales">
-    <a href="https://www.facebook.com" target="_blank"><img src="images/facebook.png" alt="Facebook"></a>
-    <a href="https://www.twitter.com" target="_blank"><img src="images/twitter.png" alt="Twitter"></a>
-    <a href="https://www.instagram.com" target="_blank"><img src="images/instagram.png" alt="Instagram"></a>
-    <a href="https://discord.gg/fTc7N6tUek" target="_blank"><img src="images/discord.png" alt="Discord"></a>
-    <a href="https://www.linkedin.com/" target="_blank"><img src="images/linkedin.png" alt="Linkedin"></a><br>
-    Sergio Gomez Oblanca
-  </div>
-</footer>
+<?php include "includes/aside.php"; ?>
+</div>
+<?php include "includes/footer.php"; ?>
 </body>
 </html>

@@ -6,10 +6,13 @@
 <body>
 <?php include "../includes/header2.php"; ?> <!-- Aquí se incluye el contenido.php -->
 <?php include "../includes/menu2.php"; ?>
-<div class="contenedor">
-    <?php include "../includes/nav_funciones.php"; ?>
-        <main>
-</main>
+
+
+    <div class="contenedor">
+    <?php include "../includes/nav_bbdd.php"; ?>
+<main>
+    
+</main> 
     <?php include "../includes/aside2.php"; ?>
 </div>
 <?php include "../includes/footer2.php"; ?>

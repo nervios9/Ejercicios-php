@@ -9,6 +9,7 @@
 <div class="contenedor">
     <?php include "../includes/nav_funciones.php"; ?>
         <main>
+            3
 </main>
     <?php include "../includes/aside2.php"; ?>
 </div>

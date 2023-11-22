@@ -1,6 +1,6 @@
 header {
-    background-color: black; /* Color de fondo opcional para el encabezado */
-    padding: 20px; /* Espaciado interior */
+    background-color: black; 
+    padding: 20px; 
    
   }
   header .texto {
@@ -10,32 +10,49 @@ header {
   padding-bottom: 20px;
   }
   .menu {
-    background-color:  darkgray; /* Borde para visualizar el contenedor */
+    background-color:  darkgray;
     text-align: center;
   }
   .menu a {
-    display: inline-block; /* Hace que los elementos sean mostrados en línea */
-    margin-right: 10px; /* Espacio entre elementos */
+    display: inline-block;
+    margin-right: 10px; 
     
   }
   
   footer{
-   
+   background-color: black;
     text-align: center;
+    color: white;
    
   }
   .redesSociales img{
     width: 40px;
   }
   nav{
-    width: 200px; /* Ancho del nav */
+    grid-area: nav; /* Asigna el área "nav" al elemento nav */
     background-color: rgb(113, 112, 112);
     color: black;
- 
-    display: block;
-    padding-left: 20px;
-  }
+   }
   main{
-    flex: 0 0 70%;
-    background-color: aqua;
+    grid-area: main; /* Asigna el área "main" al elemento main */
+  
+  }
+  .contenedor{
+    display: grid;
+    grid-template-columns: .5fr 2fr .5fr; /* Columna de 200px para el menú, el resto para el contenido */
+    grid-template-rows: 250px  ;
+    grid-template-areas: 
+      "nav main aside"; /* Definir las áreas: una para el menú y otra para el contenido */
+    justify-content: center; /* Centra el contenido horizontalmente */
+    
+  }
+  aside{
+    background-color: rgb(113, 112, 112);
+    grid-area: aside; 
+  }
+  aside img{
+    display: block;
+    width: 70px;
+    margin-left: 44px;
+    margin-top: 15px;
   }
