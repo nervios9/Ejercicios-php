@@ -1,0 +1,36 @@
+header {
+    background-color: black; /* Color de fondo opcional para el encabezado */
+    padding: 20px; /* Espaciado interior */
+   
+  }
+  header .texto {
+  color: white;
+  text-align: center;
+  margin-top: -84px;
+  padding-bottom: 20px;
+  }
+  .menu {
+    background-color:  darkgray; /* Borde para visualizar el contenedor */
+    text-align: center;
+  }
+  .menu a {
+    display: inline-block; /* Hace que los elementos sean mostrados en línea */
+    margin-right: 10px; /* Espacio entre elementos */
+    
+  }
+  
+  footer{
+   
+    text-align: center;
+   
+  }
+  .redesSociales img{
+    width: 40px;
+  }
+  nav{
+    display: block;
+    padding-left: 20px;
+  }
+  main{
+    
+  }
