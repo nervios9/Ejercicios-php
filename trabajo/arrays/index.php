@@ -11,6 +11,10 @@
 <div class="contenedor">
 <?php include "../includes/nav_arrays.php"; ?>
 <main>
+<h3>Zona de ejercicios de arrays</h3>
+     <p>Aqui se pueden consultar desde el menu de navegacion algunos de los ejercicios realizados
+        en el modulo sobre programacion con arrays
+     </p>   
 </main >
 <?php include "../includes/aside2.php"; ?>
 </div>

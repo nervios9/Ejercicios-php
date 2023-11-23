@@ -8,7 +8,11 @@
 <?php include "../includes/menu2.php"; ?>
 <div class="contenedor">
     <?php include "../includes/nav_funciones.php"; ?>
-        <main>
+<main>
+<h3>Zona de ejercicios con funciones</h3>
+     <p>Aqui se pueden consultar desde el menu de navegacion algunos de los ejercicios realizados
+        en el modulo sobre programacion con funciones
+     </p>   
 </main>
     <?php include "../includes/aside2.php"; ?>
 </div>

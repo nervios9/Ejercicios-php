@@ -9,7 +9,8 @@
 <div class="contenedor">
 <?php include "includes/nav.php"; ?>
 <main>
-
+<h3>PORTADA DE INICIO</h3>
+<p>Este sitio web contiene ejemplos representativos de los conocimientos adquiridos en el modulo <i>Desarrollo web en entorno cliente</i></p>
 
 </main>
 <?php include "includes/aside.php"; ?>

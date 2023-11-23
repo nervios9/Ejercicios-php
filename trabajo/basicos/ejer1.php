@@ -10,7 +10,8 @@
 
     <div class="contenedor">
     <?php include "../includes/nav_basicos.php"; ?>
-    <main>
+<main>
+    
 </main>
     <?php include "../includes/aside2.php"; ?>
 </div>
