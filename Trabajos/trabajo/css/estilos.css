@@ -1,0 +1,80 @@
+header {
+    background-color: black; 
+    padding: 20px; 
+    min-height: 20vh;
+  }
+  header .texto {
+  color: white;
+  text-align: center;
+  margin-top: -84px;
+  padding-bottom: 20px;
+  }
+  .menu {
+    background-color:  darkgray;
+    text-align: center;
+    font-size: 25px;
+   
+    
+  }
+  .menu a {
+    display: inline-block;
+    margin-right: 10px; 
+    text-decoration: none; 
+    color: black;
+  }
+  
+  footer{
+   background-color: black;
+   padding: 10px;
+   
+    color: white;
+    width: 100%; /* Opcional: Ancho del div al 100% del ancho de la ventana */
+    
+    /* Espaciado interior */
+    text-align: center; /* Alineación del contenido */
+   
+  }
+  .redesSociales img{
+    width: 40px;
+  }
+  nav{
+    grid-area: nav; /* Asigna el área "nav" al elemento nav */
+    background-color: rgb(113, 112, 112);
+    color: black;
+    min-height: 100%;
+    font-size: 25px;
+    
+   }
+   nav a{
+    text-decoration: none; 
+    color: black;
+   }
+  main{
+    grid-area: main; /* Asigna el área "main" al elemento main */
+   min-height: 100%;
+   max-width: 60%;
+  }
+  .contenedor{
+    display: grid;
+    grid-template-columns: .5fr 2fr .5fr; /* Columna de 200px para el menú, el resto para el contenido */
+    grid-template-areas: 
+      "nav main aside"; /* Definir las áreas: una para el menú y otra para el contenido */
+    justify-content: center; /* Centra el contenido horizontalmente */
+    min-height: 70vh;
+  }
+  aside{
+    background-color: rgb(113, 112, 112);
+    grid-area: aside; 
+    min-height: 100%;
+  }
+  aside img{
+    display: block;
+    width: 100px;
+    height: 120px;
+    margin-left: 44px;
+    margin-top: 40px;
+    
+  }
+  body{
+    min-height: 100vh;
+  }
