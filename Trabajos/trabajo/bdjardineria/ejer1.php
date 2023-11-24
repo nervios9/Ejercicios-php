@@ -1,3 +1,4 @@
+<?php session_start();?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,7 +15,7 @@
 <?php
 
 
-session_start();
+
 
 // Verificar si el usuario no está logeado
 if (!isset($_SESSION['logged_in'])) {

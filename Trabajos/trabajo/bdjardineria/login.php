@@ -1,3 +1,4 @@
+<?php session_start();?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -26,33 +27,27 @@ if (!$_REQUEST) {
     $nombre = $_POST["usuario"];
     $clave = $_POST["password"];
    
-    $conexion = mysqli_connect ("localhost", "root", "","jardineria") or die ("No se puede conectar con el servidor");
+   include "conectabd.php";
    
-    $sql="SELECT clave from usuarios where usuario='$nombre'";
-	$resulconsulta=mysqli_query($conexion,$sql) or die ("Error al hacer la consulta");
-    if ($result->num_rows === 1) {
-    
-    }else
-
-    $nfilas=mysqli_num_rows($resulconsulta);
-    $resul=false;
-	for($i=1;$i<=$nfilas;$i++){
-		$fila=mysqli_fetch_row($resulconsulta);		
-		if($nombre===$fila[0] && $clave===$fila[1] ){
-        $resul=true;
-		exit();
-        }else{
-         
-        }
-        
-	}
-	if($resul){
-        $_SESSION['logged_in'] = true;
-        echo"Bienvenido/a ahora puedes navegar por los datos";
+   $sql="SELECT clave from usuarios where nombre='$nombre'";
+$resulconsulta=mysqli_query($conexion,$sql) or die ("Error al hacer la consulta");
+    if ($resulconsulta->num_rows === 1) {
+        $resultado = $resulconsulta->fetch_assoc();
+        $contraseñaCifrada = $resultado["clave"];
+        if (password_verify($clave, $contraseñaCifrada)) {
+            $_SESSION['logged_in'] = true;
+            echo "Bienvenido/a ".$nombre." ya puedes acceder";
+            } else {
+           
+            echo "Contraseña incorrecta";
+            }
     }else{
-        echo"contraseña incorrecta";
+        echo" el usuario no existe";
+    
     }
+   
 	mysqli_close($conexion);   
+
 }
 ?>
 </form>  
