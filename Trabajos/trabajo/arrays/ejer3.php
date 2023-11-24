@@ -75,7 +75,44 @@ function dibujarArrayOrdenadoPorValor($array)
     }
     print "</table>";
 }
+if (!$_REQUEST) {
+    print "<form action='ejer3.php' method='GET'>";
+    print "<label for='desplegable' style='font-size:12pt;'>Elija el equipo:&nbsp;</label>";
+    print "<select id='desplegable' name='nombreEquipo'>";
+
+    //Ordenamos el array por clave para que el menú de selección muestre los equipos en orden alfabético
+    ksort($listaEquipos);
+
+    foreach($listaEquipos as $nombre => $p) {
+        print "<option value='$nombre'>$nombre</option>";
+    }
+    print "</select><br><br>";
+    print "<input type='submit' value='Comprobar'/>";
+    print "</form>";
+    print "<br><br>";
+
+    dibujarArray($listaEquipos);
+
+} else {
+    //Obtenemos el nombre del equipo a consultar
+    $nombreEquipo = $_REQUEST["nombreEquipo"];
+
+    //Obtenemos los puntos del equipo que nos interesa
+    $puntos = $listaEquipos[$nombreEquipo];
+
+    $lista=$listaEquipos;   //Guardamos la lista en una variable auxiliar para no perder los índices
+    rsort($listaEquipos);   //Este comando ordena la lista de equipos por puntos y convierte el índice a escalar
+
+    //Se obtiene la posición del equipo en el array convertido a array escalar
+    $posicion = array_search($puntos, $listaEquipos) + 1;
+
+    //Mostramos los resultados obtenidos
+    print "<br><p>El $nombreEquipo tiene $puntos puntos, ahora mismo es el ".$posicion."º en la clasificación.</p>";
+    print "<br><a href='ejer3.php'>Nueva consulta</a><br>";
+    dibujarArrayOrdenadoPorValor($lista);
+}
 ?>
+
 </main >
 <?php include "../includes/aside2.php"; ?>
 </div>
