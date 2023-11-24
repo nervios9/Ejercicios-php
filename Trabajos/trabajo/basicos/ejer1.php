@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <?php include "../includes/metadata2.php"; ?>
-<link rel="stylesheet" type="text/css" href="../css/estilosejer.css">
+
 </head>
 <body>
 <?php include "../includes/header2.php"; 

@@ -12,6 +12,18 @@
     <?php include "../includes/nav_bbdd.php"; ?>
 <main>
 <?php
+
+
+session_start();
+
+// Verificar si el usuario no está logeado
+if (!isset($_SESSION['logged_in'])) {
+    // Si no está logeado, redirigir a la página de inicio de sesión
+   echo "Para acceder a esta seccion tienes que iniciar sesion";
+    echo'<form action="login.php" method="post">
+    <input type="submit" value="Iniciar sesion">
+</form>';
+}else{
 		$conexion = mysqli_connect ("localhost", "root", "","jardineria") or die ("No se puede conectar con el servidor");
 	echo "<h1>Conexión correcta...</h1><br>";
 
@@ -25,14 +37,15 @@
 	echo "</tr>";
 	for($i=1;$i<=$nfilas;$i++)
 	{
-		$fila=mysqli_fetch_row($resulconsulta);		//Este comando cambia los índices con clave "NombreCampo" a índices escalares
-		//print_r($fila); echo "<br/>";				//Si descomentas esta línea podrás ver como se forman los arrays fila con sus datos e índices escalares
+		$fila=mysqli_fetch_row($resulconsulta);		
+		
 		echo "<tr>";
 		echo "<td>$fila[0]</td><td>$fila[1]</td><td>$fila[2]</td>";
 		echo "</tr>";
 	}
 	echo "</table>";
 	mysqli_close($conexion);
+}
 ?>   
 </main> 
     <?php include "../includes/aside2.php"; ?>

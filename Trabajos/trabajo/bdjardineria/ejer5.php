@@ -12,6 +12,13 @@
     <?php include "../includes/nav_bbdd.php"; ?>
 <main>
 <?php
+if (!isset($_SESSION['logged_in'])) {
+    // Si no está logeado, redirigir a la página de inicio de sesión
+   echo "Para acceder a esta seccion tienes que iniciar sesion";
+    echo'<form action="login.php" method="post">
+    <input type="submit" value="Iniciar sesion">
+</form>';
+}else{
 	$conexion = mysqli_connect ("localhost", "root", "","jardineria") or die ("No se puede conectar con el servidor");
 if (isset($_REQUEST['enviar'])){
 //Coger valores del formulario, pero es más rápido con extract
@@ -106,6 +113,7 @@ else{?>
 	<input type="submit" name="enviar" value="Insertar nuevo cliente">
 </form>
 <?php
+}
 }?>
 </main> 
     <?php include "../includes/aside2.php"; ?>

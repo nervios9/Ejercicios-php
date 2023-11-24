@@ -12,6 +12,13 @@
     <?php include "../includes/nav_bbdd.php"; ?>
 <main>
 <?php
+if (!isset($_SESSION['logged_in'])) {
+    // Si no está logeado, redirigir a la página de inicio de sesión
+   echo "Para acceder a esta seccion tienes que iniciar sesion";
+    echo'<form action="login.php" method="post">
+    <input type="submit" value="Iniciar sesion">
+</form>';
+}else{
 if (!$_REQUEST) {
 	echo "<form  action='ejer6.php' method='get'>";
 	echo "Selecciona el telefono del cliente: &nbsp;";
@@ -167,7 +174,7 @@ else
 			echo "<br><b>Ha ocurrido error al ejecutar sentencia SQL INSERT.</b><br/>";
 		echo "<a href = 'ejer6.php'>Vuelta al formulario de inserción</a><br/>";
 	}
-}?>  
+}}?>  
 </main> 
     <?php include "../includes/aside2.php"; ?>
 </div>

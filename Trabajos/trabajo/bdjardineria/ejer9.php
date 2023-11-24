@@ -12,6 +12,13 @@
     <?php include "../includes/nav_bbdd.php"; ?>
 <main>
 <?php
+if (!isset($_SESSION['logged_in'])) {
+    // Si no está logeado, redirigir a la página de inicio de sesión
+   echo "Para acceder a esta seccion tienes que iniciar sesion";
+    echo'<form action="login.php" method="post">
+    <input type="submit" value="Iniciar sesion">
+</form>';
+}else{
 //Versión con importes
 
 //Conectamos con bd jardineria
@@ -104,6 +111,7 @@ echo "</select>&nbsp;&nbsp;";
 echo "<input type='submit' name='enviar' value='Enviar consulta'>";
 echo "</form>";
 mysqli_close ($conexion);
+}
 ?>
 </main> 
     <?php include "../includes/aside2.php"; ?>

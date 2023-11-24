@@ -12,6 +12,13 @@
     <?php include "../includes/nav_bbdd.php"; ?>
 <main>
 <?php
+if (!isset($_SESSION['logged_in'])) {
+    // Si no está logeado, redirigir a la página de inicio de sesión
+   echo "Para acceder a esta seccion tienes que iniciar sesion";
+    echo'<form action="login.php" method="post">
+    <input type="submit" value="Iniciar sesion">
+</form>';
+}else{
 if (isset($_REQUEST['respuesta']))
 { /*3ª parte:  se procede a borrar el registro del cliente y, previamente, todos lo registros relacionados en tablas subordinadas*/
   borrarCliente($_REQUEST['codigo'],$_REQUEST['respuesta']);
@@ -98,6 +105,7 @@ function borrarCliente($codigo,$respuesta) {
 		echo "No se ha borrado el cliente.";
 	}
 	echo "<p><a href='ejer7.php'>VOLVER</a></p>";
+}
 }
 ?>
 </main> 
