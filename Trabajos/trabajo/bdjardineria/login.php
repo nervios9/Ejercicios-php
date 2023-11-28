@@ -22,7 +22,9 @@ if (!$_REQUEST) {
     <label for="password">Contraseña:</label>
     <input type="password" id="password" name="password"><br><br>
     <input type="submit" value="Iniciar sesión">
+    <a  href="register.php" style="text-decoration: none; color: black ; border: 1px; border-style: solid;"> Registrarse</a>
     <?php
+    
 }else{
     $nombre = $_POST["usuario"];
     $clave = $_POST["password"];
