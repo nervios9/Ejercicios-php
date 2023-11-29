@@ -38,21 +38,30 @@ $resulconsulta=mysqli_query($conexion,$sql) or die ("Error al hacer la consulta"
         $contraseñaCifrada = $resultado["clave"];
         if (password_verify($clave, $contraseñaCifrada)) {
             $_SESSION['logged_in'] = true;
+            $_SESSION['nombre'] =$nombre;
+            $_SESSION['contraseña']=$clave;
             echo "Bienvenido/a ".$nombre." ya puedes acceder";
             } else {
            
             echo "Contraseña incorrecta";
             }
     }else{
-        echo" el usuario no existe";
+        echo"Usted no esta registrado en la base de datos.Registrese  <a  href='register.php' > Aqui</a>";
     
     }
    
 	mysqli_close($conexion);   
 
 }
+
+
+if ($_REQUEST && isset($_POST['eliminar_sesion'])) {
+    unset($_SESSION['logged_in']);
+    header("Location: index.php");
+
+}
 ?>
-</form>  
+    </form>  
 </main> 
     <?php include "../includes/aside2.php"; ?>
 </div>

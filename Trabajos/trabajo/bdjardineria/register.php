@@ -43,9 +43,10 @@ if (!$_REQUEST) {
     }else{
         include "conectabd.php"; 
         $contraseñaEncriptada= password_hash($password,PASSWORD_BCRYPT);
-        $instruccion = "INSERT into usuarios (nombre, clave) values ('$user', name'$contraseñaEncriptada')";
+        $instruccion = "INSERT into usuarios (nombre, clave) values ('$username','$contraseñaEncriptada')";
         $consulta = mysqli_query($conexion, $instruccion) or exit("Fallo en la inserción");
-        print "Usuario $user insertado con éxito.<br><br>";
+        echo "Usuario $username insertado con éxito.<br><br>";
+        echo '<a  href="login.php" style="text-decoration: none; color: black ; border: 1px; border-style: solid;"> Inicia Sesion</a>';
     }
     mysqli_close ($conexion);
 }

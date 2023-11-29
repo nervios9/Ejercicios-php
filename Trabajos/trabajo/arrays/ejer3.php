@@ -11,6 +11,7 @@
 <div class="contenedor">
 <?php include "../includes/nav_arrays.php"; ?>
 <main>
+<h1>Liga de Futbol</h1>
 <?php
 //Array que contiene nombre de equipos (claves) y puntos obtenidos en la liga (valor).
 //Se supone que no va a haber 2 equipos con la misma puntuación.

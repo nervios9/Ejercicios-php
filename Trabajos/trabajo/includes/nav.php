@@ -1,5 +1,5 @@
 <nav>
-  Menu
+  <b>Menu</b>
   <br>
   <a href="./index.php">Inicio</a><br> 
   <a href="basicos/index.php">Basicos</a><br>

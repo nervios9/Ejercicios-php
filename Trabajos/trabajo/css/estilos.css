@@ -52,8 +52,10 @@ header {
   main{
     grid-area: main; /* Asigna el área "main" al elemento main */
    min-height: 100%;
-   max-width: 60%;
+   width: 97%;
+   padding: 10px;
   }
+ 
   .contenedor{
     display: grid;
     grid-template-columns: .5fr 2fr .5fr; /* Columna de 200px para el menú, el resto para el contenido */
@@ -81,4 +83,10 @@ header {
   }
 h1{
 text-align: center;
+}
+nav:first-child{
+  text-align: center;
+}
+nav:sec{
+  text-align: left;
 }

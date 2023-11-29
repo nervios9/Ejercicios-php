@@ -11,6 +11,7 @@
 <div class="contenedor">
 <?php include "../includes/nav_arrays.php"; ?>
 <main>
+<h1>Array Aleatorio</h1>
 <?php
 function generarArrayAleatorio($length, $min, $max)
 {

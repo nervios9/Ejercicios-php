@@ -9,6 +9,7 @@
 <div class="contenedor">
     <?php include "../includes/nav_funciones.php"; ?>
 <main>
+<h1>Cambio de Divisas</h1>
 <?php
                 function conversordemonedas($euros, $divisa) //El parámetro $divisa significa la divisa destino, de la siguiente forma: 0 serán dolares y 1 serán libras
                 {
@@ -21,7 +22,7 @@
                     return $libras; // aquí devuelve el resultado en libras
 
                 }
-                print "<h1>Pruebas de función para el cambio de divisas</h1>";
+              
 
             $moneda    = rand(0, 1);
             $cantidad  = rand(1, 100);

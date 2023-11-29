@@ -12,6 +12,7 @@
     <div class="contenedor">
     <?php include "../includes/nav_basicos.php"; ?>
 <main>
+<h1>Conversor €</h1>
 <?php
 if (!$_REQUEST) {
     ?>

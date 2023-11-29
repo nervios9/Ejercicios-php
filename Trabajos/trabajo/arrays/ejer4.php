@@ -11,6 +11,7 @@
 <div class="contenedor">
 <?php include "../includes/nav_arrays.php"; ?>
 <main>
+<h1>Funciones Arrays</h1>
 <?php
 // Genera un array con números enteros del 1 al 20 (inclusive)
 $numbers = range(1, 20);

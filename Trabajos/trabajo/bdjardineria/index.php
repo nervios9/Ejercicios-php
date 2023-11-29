@@ -20,6 +20,11 @@ if (!isset($_SESSION['logged_in'])) {
     <?php include "../includes/nav_bbdd.php"; ?>
 
 <main>
+<p style="text-align:end;">Usuario:<?php print $_SESSION['nombre']?>
+		<form style="text-align:end;" method="post" action="login.php">
+		<input  type="submit" name="eliminar_sesion" value="Cerrar Sesión">
+  		</form> 
+	</p>
 <h3>Zona de ejercicios de base de datos</h3>
      <p>Aqui se pueden consultar desde el menu de navegacion algunos de los ejercicios realizados
         en el modulo sobre programacion base de datos

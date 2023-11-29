@@ -12,6 +12,8 @@
     <div class="contenedor">
     <?php include "../includes/nav_basicos.php"; ?>
 <main>
+
+<h1>Test PHP</h1>
 <?php
 if (!$_REQUEST) {
     ?>

@@ -11,6 +11,7 @@
 <div class="contenedor">
 <?php include "../includes/nav_arrays.php"; ?>
 <main>
+<h1>Funciones String</h1>
 <?php
     $words = ["gato", "perro", "elefante", "jirafa", "tortuga", "leon", "tigre", "loro", "canguro", "pinguino"];
 

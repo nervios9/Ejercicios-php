@@ -9,6 +9,7 @@
 <div class="contenedor">
     <?php include "../includes/nav_funciones.php"; ?>
 <main>
+<h1>Tablas HTML</h1>
 <?php
                 function tablaNxM($n,$m)
                 {

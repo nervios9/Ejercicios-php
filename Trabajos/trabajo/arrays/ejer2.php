@@ -11,6 +11,7 @@
 <div class="contenedor">
 <?php include "../includes/nav_arrays.php"; ?>
 <main>
+<h1>Ordenacion</h1>
 <?php
 function dibujarArray($array)
 {
@@ -82,8 +83,7 @@ $localidades = [
     "Teruel"     => 35691];
 
 //Llamadas a las distintas funciones implementadas
-print "<br>";
-print "<h1>LLAMADAS A FUNCIONES CON ARRAY DE LOCALIDADES</h1>";
+
 print "<br>";
 dibujarArray($localidades);
 print "<br>";

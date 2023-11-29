@@ -11,6 +11,7 @@
 <div class="contenedor">
 <?php include "../includes/nav_arrays.php"; ?>
 <main>
+<h1>Palindromo</h1>
     <?php
       function PALINDROMO($str){
 
@@ -51,7 +52,7 @@ if($_REQUEST) {
 
             ?>
             <br>
-            <h1>Formulario</h1>
+            
             <form action="ejer6.php" method="post">
                 <label for="STRING">Introduce texto</label><br>
                 <input type="text" name="STRING" size="40"><br><br>

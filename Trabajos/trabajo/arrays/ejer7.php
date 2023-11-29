@@ -11,6 +11,7 @@
 <div class="contenedor">
 <?php include "../includes/nav_arrays.php"; ?>
 <main>
+<h1>Matrices</h1>
 <?php
 if($_REQUEST) {     //Si no hay nada almacenado en el array REQUEST pasa al final del código donde se muestra el formulario inicial
 
@@ -152,7 +153,7 @@ if($_REQUEST) {     //Si no hay nada almacenado en el array REQUEST pasa al fina
 else{
 ?>
 
-<h1>DIMENSIÓN DE LAS MATRICES</h1>
+
 <br><br><h4>Introduce el número de filas y columnas de las matrices a multiplicar.</h4>
 <br><p>El cálculo está limitado a matrices de dimensión 5. Las columnas de la matriz del primer término deben coincidir con las filas de la segunda matriz.</p><br>
 <form action="ejer7.php" method="post">

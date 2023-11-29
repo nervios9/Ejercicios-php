@@ -12,13 +12,19 @@
     <div class="contenedor">
     <?php include "../includes/nav_bbdd.php"; ?>
 <main>
+
+<p style="text-align:end;">Usuario:<?php print $_SESSION['nombre']?>
+		<form style="text-align:end;" method="post" action="login.php">
+		<input  type="submit" name="eliminar_sesion" value="Cerrar Sesión">
+  		</form> 
+	</p>
+	<h1>Borrar Clientes</h1>
 <?php
+
 if (!isset($_SESSION['logged_in'])) {
     // Si no está logeado, redirigir a la página de inicio de sesión
-   echo "Para acceder a esta seccion tienes que iniciar sesion";
-    echo'<form action="login.php" method="post">
-    <input type="submit" value="Iniciar sesion">
-</form>';
+    echo "Para acceder a esta seccion tienes que <a  href='login.php'>
+    Iniciar Sesion</a> o <a  href='register.php' > Registrarse</a>";
 }else{
 if (isset($_REQUEST['respuesta']))
 { /*3ª parte:  se procede a borrar el registro del cliente y, previamente, todos lo registros relacionados en tablas subordinadas*/
@@ -41,9 +47,10 @@ else{	/*2ª Parte: se muestran los datos del cliente y se pide confirmación de 
 }
 ?>
 <?php
+
 //Funciones auxiliares
 function mostrarClienteyPreguntarBorrar($tel) {
-    $conexion = mysqli_connect ("localhost", "root", "","jardineria") or die ("No se puede conectar con el servidor");
+	include "conectabd.php";
 	if(!empty($tel)){
 		$consulta = mysqli_query($conexion,"SELECT * FROM clientes WHERE telefono='$tel';")
 			or die ("Error al seleccionar cliente");

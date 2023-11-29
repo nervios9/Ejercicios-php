@@ -12,6 +12,7 @@
     <div class="contenedor">
     <?php include "../includes/nav_basicos.php"; ?>
 <main>
+<h1>Cambio Divisas</h1>
 <?php
 if (!$_REQUEST) {
     

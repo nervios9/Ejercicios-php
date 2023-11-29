@@ -12,21 +12,29 @@
     <div class="contenedor">
     <?php include "../includes/nav_bbdd.php"; ?>
 <main>
-<?php
-
-
-
-
+	<?php
 // Verificar si el usuario no está logeado
 if (!isset($_SESSION['logged_in'])) {
     // Si no está logeado, redirigir a la página de inicio de sesión
-   echo "Para acceder a esta seccion tienes que iniciar sesion";
-    echo'<form action="login.php" method="post">
-    <input type="submit" value="Iniciar sesion">
-</form>';
+   echo "Para acceder a esta seccion tienes que <a  href='login.php'>
+    Iniciar Sesion</a> o <a  href='register.php' > Registrarse</a>";
+
+   
 }else{
-		$conexion = mysqli_connect ("localhost", "root", "","jardineria") or die ("No se puede conectar con el servidor");
-	echo "<h1>Conexión correcta...</h1><br>";
+	
+?>
+	
+	<p style="text-align:end;">Usuario:<?php print $_SESSION['nombre']?>
+		<form style="text-align:end;" method="post" action="login.php">
+		<input  type="submit" name="eliminar_sesion" value="Cerrar Sesión">
+  		</form> 
+	</p>
+
+	
+	<h1>Lista Clientes</h1>
+	<?php
+		include "conectabd.php";
+	
 
 	$sql="SELECT CodigoCliente, NombreCliente, NombreContacto from clientes";
 	$resulconsulta=mysqli_query($conexion,$sql) or die ("Error al hacer la consulta");

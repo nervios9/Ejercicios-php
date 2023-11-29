@@ -9,6 +9,7 @@
 <div class="contenedor">
     <?php include "../includes/nav_funciones.php"; ?>
         <main>
+		<h1>Numeros Perfectos</h1>
         <?php
 					function sumadivisores($n)
 					{
@@ -30,7 +31,7 @@
 						return false;
 					}
 
-					print "<h1>Pruebas de función para números perfectos</h1>";
+				
 
 				$n1 = 28;
 				echo "La suma de divisores  de $n1 es: ",sumadivisores($n1),"<br/>";

@@ -9,6 +9,7 @@
 <div class="contenedor">
     <?php include "../includes/nav_funciones.php"; ?>
         <main>
+        <h1>Nº Primos</h1>
         <?php
                 function esprimo1($x)
                 {
@@ -66,7 +67,7 @@
                     return esprimo3(--$x);   //Se vuelve a llamar a la función restándole 1
                 }
 
-                print "<h1>Pruebas de función para números primos</h1>";
+                
             print "<h2>Función <em>esprimo1</em></h2>";
 
             $n = rand(1, 20);
